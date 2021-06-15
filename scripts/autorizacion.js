@@ -9,7 +9,7 @@ auth.onAuthStateChanged(user =>{
         configurarMenu();
     }
 });
-const formaingresar = document.getElementById('formLogin');
+const formaingresar = document.getElementById('formaingresar');
 
 formaingresar.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -58,6 +58,8 @@ salir.addEventListener('click', (e)=>{
             alert('You have closed the sesion');
     });
 })
+const formaregistrate = document.getElementById('formaregistrate');
+
 formaregistrate.addEventListener('submit',(e)=>{
     e.preventDefault();
 
