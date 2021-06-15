@@ -66,11 +66,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="formLogin">
+          <form id="formaingresar">
             <div class="row">
-              <div class="col-12 m-2"> 
-                <input type="text" id="rnombre" required class="form-control" placeholder="Ingresa tu nombre">
-              </div>
+              
                 <input type="email" id="correo" required class="form-control" placeholder="Ingresa correo electronico">
               </div>
             </div>
@@ -107,17 +105,32 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="formRegister">
-            <div class="row">
+          <form id="formaregistrate">
+            <div class="row m-2">
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="rnombre" required placeholder="Ingrese su nombre completo">
+                        </div>
+                    </div>
+            <div class="row m-2">
               <div class="col-12 m-2"> 
-                <input type="email" id="rcorreo" required class="form-control" placeholder="Enter your email">
+                <input type="email" id="rcorreo" required class="form-control" placeholder="Ingresa Correo Electronico">
               </div>
             </div>
             <div class="row">
               <div class="col-12 m-2"> 
-                <input type="password" id="rcontrasena" required class="form-control" placeholder="Enter your password">
+                <input type="password" id="rcontrasena" required class="form-control" placeholder="Ingresa Contraseña">
               </div>
             </div>
+            <div class="row m-2">
+                        <div class="col-12">
+                            <input type="number" step="any" class="form-control" id="rtelefono" required placeholder="Ingrese su teléfono">
+                        </div>
+                    </div>
+            <div class="row m-2">
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="rdireccion" required placeholder="Ingrese su dirección">
+                        </div>
+                    </div>
             <div class="row">
               <div class="col-12 m-2 text-center"> 
                 <input type="submit" class="btn btn-primary" value="Registrarse">
