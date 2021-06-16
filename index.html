@@ -193,7 +193,49 @@
     </div>
     
   </div>
+  <script>
+      
+    var informacion =  "<h1>Una Ubicación Increíble.</h1>"
+          informacion += "<p><strong>Dirección:</strong> Colonia increíble, Calle Asombrosa 125.</p>"
+          informacion += "<p><strong>Teléfono:</strong>477 718 8578.</p>"
 
+          function iniciaMapa() {
+    var propiedades = {
+  center: {
+      lat: 21.152639, lng: -101.711598
+  },
+  zoom: 14
+};
+
+const mapa = document.getElementById("map")
+const map = new google.maps.Map(mapa,propiedades)
+
+if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(position => {
+
+      let position1 = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+      }
+      let propertiesMarker1 = {
+                      position: position1,
+                      map,
+                      title: "Marker1"
+                  }
+                  const marker1 = new google.maps.Marker(propertiesMarker1);
+                  map.setCenter(position1);
+
+ const infoWindow1 = new google.maps.InfoWindow({
+  content : informacion
+         });
+          marker1.addListener("mouseover", ()=>{
+                      infoWindow1.open(map, marker1);
+                  })
+                });
+              }
+            }
+    
+  </script>
  
 
 
@@ -225,49 +267,7 @@
       const db = firebase.firestore();
     </script>
 
-    <script>
-      
-      var informacion =  "<h1>Una Ubicación Increíble.</h1>"
-            informacion += "<p><strong>Dirección:</strong> Colonia increíble, Calle Asombrosa 125.</p>"
-            informacion += "<p><strong>Teléfono:</strong>477 718 8578.</p>"
-
-            function iniciaMapa() {
-      var propiedades = {
-    center: {
-        lat: 21.152639, lng: -101.711598
-    },
-    zoom: 14
-};
-
-const mapa = document.getElementById("map")
-const map = new google.maps.Map(mapa,propiedades)
-
-if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(position => {
-
-        let position1 = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        }
-        let propertiesMarker1 = {
-                        position: position1,
-                        map,
-                        title: "Marker1"
-                    }
-                    const marker1 = new google.maps.Marker(propertiesMarker1);
-                    map.setCenter(position1);
-
-   const infoWindow1 = new google.maps.InfoWindow({
-    content : informacion
-           });
-            marker1.addListener("mouseover", ()=>{
-                        infoWindow1.open(map, marker1);
-                    })
-                  });
-                }
-              }
-      
-    </script>
+    
 
     <script src="scripts/autorizacion.js"></script>
     <script src="scripts/index.js"></script>
