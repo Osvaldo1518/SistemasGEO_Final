@@ -13,7 +13,7 @@ const configurarMenu = (user) =>{
             `;
 
             datosdelacuenta.innerHTML = html;
-        })
+        });
 
         listaloggedin.forEach(item => item.style.display = 'block');
         listaloggedout.forEach(item => item.style.display = 'none');
