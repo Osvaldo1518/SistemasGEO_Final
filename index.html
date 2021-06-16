@@ -192,6 +192,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+              <h2 class="text-center">VEN A CONOCERNOS</h2>
                 <div id="map"></div>
             </div>
         </div>
@@ -231,6 +232,7 @@
       var informacion =  "<h1>Una Ubicación Increíble.</h1>"
             informacion += "<p><strong>Dirección:</strong> Colonia increíble, Calle Asombrosa 125.</p>"
             informacion += "<p><strong>Teléfono:</strong>477 718 8578.</p>"
+            
             function iniciaMapa() {
       var propiedades = {
     center: {
@@ -257,10 +259,10 @@ if(navigator.geolocation){
                     const marker1 = new google.maps.Marker(propertiesMarker1);
                     map.setCenter(position1);
 
-const infoWindow1 = new google.maps.InfoWindow({
+   const infoWindow1 = new google.maps.InfoWindow({
     content : informacion
-});
-marker1.addListener("mouseover", ()=>{
+           });
+            marker1.addListener("mouseover", ()=>{
                         infoWindow1.open(map, marker1);
                     })
                   });
